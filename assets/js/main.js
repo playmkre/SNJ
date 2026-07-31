@@ -1,5 +1,5 @@
 /* =================================================================
-   SNJ Industrial Systems — main.js (v3.2)
+   ODI Corporate Site — main.js (v3.2)
    - i18n (ko default, en switchable)
    - Language toggle in header (KR | EN segmented control)
    - localStorage persists selection + <html lang> sync
@@ -7,8 +7,8 @@
    ================================================================= */
 
 const BRAND = {
-  name:  "SNJ Industrial Systems",
-  short: "SNJ"
+  name:  "오디아이 주식회사 (ODI)",
+  short: "ODI"
 };
 
 const CONTACT = {
@@ -32,32 +32,32 @@ const NAV = [
 const I18N = {
   ko: {
     meta: {
-      title: "SNJ Industrial Systems — 반도체·자동화 장비 OEM/ODM 제조 파트너",
-      desc:  "SNJ Industrial Systems · 반도체·자동화 장비의 OEM·ODM Turnkey 제조 파트너. 조립·전장·검사·출하 공정을 통합 관리합니다."
+      title: "오디아이(ODI) — 반도체·자동화 장비 OEM/ODM 제조 파트너",
+      desc:  "오디아이(ODI) · 반도체·자동화 장비의 OEM·ODM Turnkey 제조 파트너. 조립·전장·검사·출하 공정을 통합 관리합니다."
     },
     nav: { company: "Company", business: "Business", capability: "Capability",
            quality: "Quality", portfolio: "Portfolio", contact: "Contact" },
     header: { langKR: "KR", langEN: "EN" },
     hero: {
-      eyebrow: "SNJ Industrial Systems · OEM · ODM · Turnkey",
+      eyebrow: "오디아이(ODI) · OEM · ODM · Turnkey",
       titleA:  "반도체·자동화 장비\n제조를 위한",
       titleB:  "정밀 OEM/ODM 파트너",
-      lede:    "SNJ는 고객사의 장비 설계와 제조 요구사항을\n실제 생산 가능한 형태로 구현합니다.\n\n기구 조립, 전장 배선, 기능 검사, 출하 준비까지 주요 제조 공정을\n통합 관리하며, 반도체·디스플레이·자동화 장비 프로젝트에 대응합니다.",
+      lede:    "ODI는 고객사의 장비 설계와 제조 요구사항을\n실제 생산 가능한 형태로 구현합니다.\n\n기구 조립, 전장 배선, 기능 검사, 출하 준비까지 주요 제조 공정을\n통합 관리하며, 반도체·디스플레이·자동화 장비 프로젝트에 대응합니다.",
       ctaBiz: "Business 보기", ctaContact: "문의하기",
       metaK1: "사업 영역", metaV1: "반도체 · 자동화\n자동차 부품 · 디스플레이",
-      metaK2: "시설",      metaV2: "경기도 화성시 만세구 양감면 정문송산로93번길 10-8",
+      metaK2: "시설",      metaV2: "경기도 화성시 만세구 양감면 정문송산로93번길 10-75",
       metaV2sub: "Republic of Korea",
       metaK3: "수행 범위", metaV3: "조립 · 전장 · 검사 · 출하\nOEM · ODM · Turnkey",
-      capCap: "SNJ · Production Facility",
+      capCap: "ODI · Production Facility",
       capLoc: "화성시 만세구 양감면"
     },
     co: {
       label: "§ 01 — Company Overview",
-      h:     "SNJ는 어떤 회사인가",
-      desc:  "SNJ Industrial Systems는 반도체·자동화 장비의 OEM·ODM 제조를 전문으로 하는 정밀 장비 제조사입니다.\n\n고객의 설계 자료를 바탕으로 조립·전장·검사·출하의 주요 공정을 통합 관리하며, 검사·자동화·이송 장비를 중심으로 제조 협업을 수행합니다.",
-      lede:  "SNJ Industrial Systems는 정밀 장비 제조 프로젝트를 수행하는 산업장비 제조 파트너입니다.",
+      h:     "ODI는 어떤 회사인가",
+      desc:  "오디아이(ODI)는 반도체·자동화 장비의 OEM·ODM 제조를 전문으로 하는 정밀 장비 제조사입니다.\n\n고객의 설계 자료를 바탕으로 조립·전장·검사·출하의 주요 공정을 통합 관리하며, 검사·자동화·이송 장비를 중심으로 제조 협업을 수행합니다.",
+      lede:  "오디아이(ODI)는 정밀 장비 제조 프로젝트를 수행하는 산업장비 제조 파트너입니다.",
       p1:    "고객사가 보유한 도면, BOM, 조립 기준서, 검사 기준서를 바탕으로 장비 조립과 전장 배선, 기능 검사, 출하 준비까지의 제조 과정을 체계적으로 운영합니다.",
-      p2:    "SNJ의 역할은 단순 부품 조립에 머물지 않습니다.\n\n프로젝트 요구사항을 검토하고, 제조 공정에서 발생할 수 있는 이슈를 사전에 확인하며, 고객 검수와 출하 단계까지 이어지는 제조 흐름을 안정적으로 관리합니다.",
+      p2:    "ODI의 역할은 단순 부품 조립에 머물지 않습니다.\n\n프로젝트 요구사항을 검토하고, 제조 공정에서 발생할 수 있는 이슈를 사전에 확인하며, 고객 검수와 출하 단계까지 이어지는 제조 흐름을 안정적으로 관리합니다.",
       hl1t: "Turnkey 제조 구조", hl1sub: "END-TO-END MANUFACTURING",
       hl1b: "도면 검토 · 자재 입고 · 조립 · 전장 · 검사 · 출하의 주요 공정을 내부 시설에서 통합 관리합니다.",
       hl2t: "공정 단계별 품질 게이트", hl2sub: "STAGE-BASED QA",
@@ -65,11 +65,11 @@ const I18N = {
       hl3t: "공정별 구역 분리 운영 구조", hl3sub: "ZONE-SEPARATED LAYOUT",
       hl3b: "조립 · 전장 · 검사 · 출하 · 자재 보관 영역을 분리해, 공정 간 간섭과 자재 혼선을 줄이는 구조로 운영합니다.",
       hl4t: "화성 양감면 시설", hl4sub: "HWASEONG FACTORY",
-      hl4b: "경기도 화성시 만세구 양감면 정문송산로93번길 10-8 소재. 검사·자동화·이송 장비 등 다양한 정밀 장비 제조에 대응합니다."
+      hl4b: "경기도 화성시 만세구 양감면 정문송산로93번길 10-75 소재. 검사·자동화·이송 장비 등 다양한 정밀 장비 제조에 대응합니다."
     },
     why: {
-      label: "§ 02 — Why SNJ", h: "SNJ를 선택하는 이유",
-      desc:  "SNJ는 단순 외주 조립사가 아니라, 도면 검토부터 출하까지의 제조 흐름을 고객과 함께 책임지는 OEM/ODM 파트너로 일합니다.\n\n다음 네 가지 기준이 SNJ의 작업 방식을 결정합니다.",
+      label: "§ 02 — Why ODI", h: "ODI를 선택하는 이유",
+      desc:  "ODI는 단순 외주 조립사가 아니라, 도면 검토부터 출하까지의 제조 흐름을 고객과 함께 책임지는 OEM/ODM 파트너로 일합니다.\n\n다음 네 가지 기준이 ODI의 작업 방식을 결정합니다.",
       c1t: "장비 제조 중심의 실행력", c1sub: "MANUFACTURING EXECUTION",
       c1b: "도면과 사양을 실제 장비로 구현하는 조립·전장·검사 중심의 제조 역량을 제공합니다.",
       c2t: "공정별 검수 체계", c2sub: "STAGE-BASED QA",
@@ -81,10 +81,10 @@ const I18N = {
     },
     biz: {
       label: "§ 03 — Business", h: "사업 영역",
-      desc:  "SNJ가 제조에 대응하는 장비군과, 협업 시 어떤 자료를 받아 어떤 수행을 거쳐 어떤 결과물을 전달하는지에 대한 안내입니다.\n\n모든 프로젝트는 고객의 도면과 사양을 기준으로 진행되며, 세부 범위는 문의 단계에서 함께 정의합니다.",
-      rowK1: "장비 유형", rowK2: "고객 자료", rowK3: "SNJ 수행", rowK4: "결과물",
+      desc:  "ODI가 제조에 대응하는 장비군과, 협업 시 어떤 자료를 받아 어떤 수행을 거쳐 어떤 결과물을 전달하는지에 대한 안내입니다.\n\n모든 프로젝트는 고객의 도면과 사양을 기준으로 진행되며, 세부 범위는 문의 단계에서 함께 정의합니다.",
+      rowK1: "장비 유형", rowK2: "고객 자료", rowK3: "ODI 수행", rowK4: "결과물",
       c1t: "반도체 검사 장비", c1sub: "SEMICONDUCTOR INSPECTION",
-      c1i: "반도체 후공정 라인의 검사·핸들링 장비 제조에 대응합니다.\n\n정밀 이송 부품과 광학 검사 모듈을 포함한 복합 장비의 조립·전장·검사를 SNJ 내부에서 처리합니다.",
+      c1i: "반도체 후공정 라인의 검사·핸들링 장비 제조에 대응합니다.\n\n정밀 이송 부품과 광학 검사 모듈을 포함한 복합 장비의 조립·전장·검사를 ODI 내부에서 처리합니다.",
       c1v1: "Loader · Handler · Vision Inspection · 검사·이송 장비",
       c1v2: "기계 도면 · 전장 회로도 · BOM · 작업 사양서",
       c1v3: "자재 입고 검수 · 조립 · 전장·배선 · 기능 검사 · 출하 검수",
@@ -102,7 +102,7 @@ const I18N = {
       c3v3: "조립 · 전장 · 검사 시퀀스 점검 · 출하 검수",
       c3v4: "완성 장비 · 검사 기록 · 출하 문서",
       c4t: "OEM · ODM Turnkey", c4sub: "TURNKEY MANUFACTURING",
-      c4i: "자재 조달 범위 또는 입고 일정 협의부터 조립·전장·검사·출하까지의 주요 공정을 SNJ가 통합 관리하는 Turnkey 협업입니다.\n\n부분 공정 협업도 가능합니다.",
+      c4i: "자재 조달 범위 또는 입고 일정 협의부터 조립·전장·검사·출하까지의 주요 공정을 ODI가 통합 관리하는 Turnkey 협업입니다.\n\n부분 공정 협업도 가능합니다.",
       c4v1: "정밀 장비 전반 · OEM 제조 협업 · ODM 제작 협의",
       c4v2: "도면 · BOM · 제조 사양 · 시운전 기준",
       c4v3: "자재 일정 협의 · 조립 · 전장 · 검사 · 시운전 · 출하",
@@ -110,7 +110,7 @@ const I18N = {
     },
     mp: {
       label: "§ 04 — Manufacturing Process", h: "제조 공정 흐름",
-      desc:  "SNJ의 제조는 도면 검토에서 출하까지 8개 단계로 진행됩니다.\n\n각 단계는 담당자와 검수 기준이 정의되어 있으며, 단계 사이의 인계는 기록과 체크리스트를 기반으로 이루어집니다.",
+      desc:  "ODI의 제조는 도면 검토에서 출하까지 8개 단계로 진행됩니다.\n\n각 단계는 담당자와 검수 기준이 정의되어 있으며, 단계 사이의 인계는 기록과 체크리스트를 기반으로 이루어집니다.",
       s1t:"도면 검토",        s1sub:"DRAWING REVIEW",   s1b:"기계·전장 도면, BOM, 사양을 검토하고 제조성 의견을 정리.",
       s2t:"자재 조달 범위 또는 입고 일정 협의", s2sub:"MATERIAL SCHEDULE", s2b:"BOM 기준 자재 조달 범위 또는 입고 일정을 협의.",
       s3t:"자재 입고",        s3sub:"INTAKE",           s3b:"입고 자재의 도면 일치 여부 검수 및 보관.",
@@ -133,7 +133,7 @@ const I18N = {
     },
     qa: {
       label: "§ 06 — Quality System", h: "품질 관리 체계",
-      desc:  "출하 단계의 단일 검사로 품질을 보장하기는 어렵다는 판단에 따라, SNJ는 제조 흐름 안에 5개의 검수 게이트를 두고 단계마다 분리된 기준으로 점검을 수행합니다.\n\n각 게이트는 체크리스트 기반으로 운영되며, 검수 결과는 프로젝트 단위로 기록됩니다.",
+      desc:  "출하 단계의 단일 검사로 품질을 보장하기는 어렵다는 판단에 따라, ODI는 제조 흐름 안에 5개의 검수 게이트를 두고 단계마다 분리된 기준으로 점검을 수행합니다.\n\n각 게이트는 체크리스트 기반으로 운영되며, 검수 결과는 프로젝트 단위로 기록됩니다.",
       s1t:"자재 입고 검수", s1sub:"MATERIAL INTAKE",  s1b:"입고 자재의 도면·사양 일치 여부, 수량, 외관 손상을 확인하고 보관 위치를 지정합니다.",
       s2t:"조립 검수",      s2sub:"ASSEMBLY REVIEW",  s2b:"조립 완료 후 도면 기준 점검, 체결부 정렬·고정 상태를 검수합니다.",
       s3t:"전장 검수",      s3sub:"WIRING AUDIT",     s3b:"전장 도면과 배선 라벨 대조, 절연·연속성 측정, 배선 정리 상태를 점검합니다.",
@@ -144,7 +144,7 @@ const I18N = {
     },
     wf: {
       label: "§ 07 — Project Workflow", h: "프로젝트 진행 흐름",
-      desc:  "문의 접수에서 고객 검수까지, 한 프로젝트가 SNJ를 통해 진행되는 8단계의 흐름입니다.\n\n단계마다 고객과 공유하는 자료와 확인 시점이 정의되어 있어, 진행 상황을 양측이 일관된 기준으로 추적할 수 있습니다.",
+      desc:  "문의 접수에서 고객 검수까지, 한 프로젝트가 ODI를 통해 진행되는 8단계의 흐름입니다.\n\n단계마다 고객과 공유하는 자료와 확인 시점이 정의되어 있어, 진행 상황을 양측이 일관된 기준으로 추적할 수 있습니다.",
       i1t:"상담 · 자료 접수",  i1p:"Intake",   i1b:"프로젝트 개요와 일정, 수행 범위를 협의하고 도면·BOM·사양 자료를 접수합니다.",
       i2t:"도면 · BOM 검토",   i2p:"Review",   i2b:"제조성·정합성 관점에서 도면과 BOM을 검토하고, 필요한 보완 사항을 정리해 공유합니다.",
       i3t:"제조 일정 수립",    i3p:"Schedule", i3b:"자재 입고 일정과 공정 순서를 반영해 제조 일정을 수립하고 고객과 확정합니다.",
@@ -155,20 +155,20 @@ const I18N = {
       i8t:"고객 검수 대응",    i8p:"Sign-off", i8b:"고객 인수 단계의 점검 사항과 추가 조정 요청에 대응하고 인수 자료를 마무리합니다."
     },
     growth: {
-      label: "§ 08 — SNJ Growth Overview", h: "SNJ의 성장 흐름",
-      desc:  "SNJ는 반도체·자동화 장비 제조 분야에서 생산 운영의 안정화, 품질 체계 강화, 포트폴리오 확장을 바탕으로 지속적인 성장 흐름을 만들어가고 있습니다.",
+      label: "§ 08 — ODI Growth Overview", h: "ODI의 성장 흐름",
+      desc:  "ODI는 반도체·자동화 장비 제조 분야에서 생산 운영의 안정화, 품질 체계 강화, 포트폴리오 확장을 바탕으로 지속적인 성장 흐름을 만들어가고 있습니다.",
       c1lbl: "CHART · 01 · LINE",  c1t: "사업 성장 흐름",  c1sub: "Business Growth Trend",
-      c1cap: "사업 기반과 제조 실행력이 축적되면서 SNJ의 성장 흐름은 점진적인 상승세를 이어가고 있습니다.",
+      c1cap: "사업 기반과 제조 실행력이 축적되면서 ODI의 성장 흐름은 점진적인 상승세를 이어가고 있습니다.",
       c2lbl: "CHART · 02 · BAR",   c2t: "운영 확장 흐름",  c2sub: "Operational Expansion",
       c2cap: "프로젝트 수행 경험과 제조 대응력이 쌓이면서 생산 및 출하 운영 역량 역시 단계적으로 확대되고 있습니다.",
       c3lbl: "CHART · 03 · DONUT", c3t: "성장 기반 요소",  c3sub: "Growth Foundation",
-      c3cap: "SNJ의 성장은 생산 실행력, 품질 관리, 납기 대응, 확장 준비 역량이 균형 있게 결합된 구조 위에서 이루어집니다.",
+      c3cap: "ODI의 성장은 생산 실행력, 품질 관리, 납기 대응, 확장 준비 역량이 균형 있게 결합된 구조 위에서 이루어집니다.",
       legend1:"생산 실행력", legend2:"품질 관리", legend3:"납기 대응", legend4:"확장 준비",
       donutCenter1:"GROWTH", donutCenter2:"FOUNDATION"
     },
     port: {
       label: "§ 09 — Portfolio", h: "사례",
-      desc:  "고객사 및 프로젝트 정보는 공개 가능 범위 내에서 소개합니다.\n\n각 사례는 익명으로 정리되며, 산업군·목적·SNJ 담당 범위·산출물 기준으로 안내합니다.",
+      desc:  "고객사 및 프로젝트 정보는 공개 가능 범위 내에서 소개합니다.\n\n각 사례는 익명으로 정리되며, 산업군·목적·ODI 담당 범위·산출물 기준으로 안내합니다.",
       rowK1:"산업군", rowK2:"목적", rowK3:"담당 범위", rowK4:"산출물",
       c1cat:"Semiconductor", c1t:"반도체 검사 장비 제조 협업",
       c1v1:"반도체 후공정", c1v2:"검사 장비 OEM 제조 협업",
@@ -185,7 +185,7 @@ const I18N = {
     },
     fac: {
       label: "§ 10 — Facility", h: "시설",
-      desc:  "경기도 화성시 만세구 양감면 정문송산로93번길 10-8 소재. 조립·전장·검사·출하·자재 보관의 공정별 구역 분리 운영 구조이며,\n각 구역은 작업 동선과 자재 흐름을 고려해 배치합니다.",
+      desc:  "경기도 화성시 만세구 양감면 정문송산로93번길 10-75 소재. 조립·전장·검사·출하·자재 보관의 공정별 구역 분리 운영 구조이며,\n각 구역은 작업 동선과 자재 흐름을 고려해 배치합니다.",
       z1t:"조립 구역",       z1sub:"ASSEMBLY",         z1b:"기계 조립 작업 공간. 모델별 작업대와 공구·계측기 보관 위치를 지정해 운영합니다.",
       z2t:"전장 · 배선 구역", z2sub:"WIRING",          z2b:"전장 배선과 절연·연속성 점검을 수행하는 공간. 회로도 검수 자료를 함께 보관합니다.",
       z3t:"검사 · 시운전 구역",z3sub:"TEST",            z3b:"기능 검사와 시운전이 진행되는 공간. 시퀀스 동작 확인과 정밀도 점검에 사용됩니다.",
@@ -194,10 +194,10 @@ const I18N = {
     },
     contact: {
       label:  "§ 11 — Contact",
-      hA:     "SNJ와 제조 프로젝트를", hB: "논의해보세요",
+      hA:     "ODI와 제조 프로젝트를", hB: "논의해보세요",
       lede:   "도면, BOM, 조립 기준서, 검사 기준서를 바탕으로 제조 가능 범위와 진행 방식을 검토합니다.",
-      infoK1:"회사",   infoV1:"SNJ Industrial Systems",
-      infoK2:"시설",   infoV2:"경기도 화성시 만세구 양감면 정문송산로93번길 10-8",
+      infoK1:"회사",   infoV1:"오디아이(ODI)",
+      infoK2:"시설",   infoV2:"경기도 화성시 만세구 양감면 정문송산로93번길 10-75",
       infoK3:"이메일", infoK4:"전화",
       pending:"문의 정보 입력 예정",
       inqHdr:"Inquiry Types · 문의 유형",
@@ -208,14 +208,14 @@ const I18N = {
       inq5t:"품질 · 출하 문의",    inq5s:"Quality · Shipment",
       inq6t:"회사소개서 요청",     inq6s:"Company Profile",
       locHdr:"Location · 오시는 길",
-      addrShortKR:"정문송산로93번길 10-8",
+      addrShortKR:"정문송산로93번길 10-75",
       addrShortRegion:"화성시 만세구 양감면",
       openMap:"지도 열기"
     },
     foot: {
       sitemap:"Sitemap", location:"Location", contact:"Contact",
-      addrKR:  "경기도 화성시 만세구 양감면 정문송산로93번길 10-8",
-      addrEN:  "10-8 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do",
+      addrKR:  "경기도 화성시 만세구 양감면 정문송산로93번길 10-75",
+      addrEN:  "10-75 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do",
       desc:   "반도체·자동화 장비 OEM·ODM 제조 파트너\n검사·자동화 장비의 조립·전장·검사·출하 공정을 통합 관리합니다",
       tag:    "Precision Equipment Manufacturing"
     },
@@ -228,29 +228,29 @@ const I18N = {
 
   en: {
     meta: {
-      title: "SNJ Industrial Systems — OEM/ODM Manufacturing Partner for Semiconductor & Automation Equipment",
-      desc:  "SNJ Industrial Systems · Turnkey OEM/ODM manufacturing partner for semiconductor and automation equipment. Assembly, wiring, inspection, and shipment under integrated process management."
+      title: "ODI Co., Ltd. — OEM/ODM Manufacturing Partner for Semiconductor & Automation Equipment",
+      desc:  "ODI Co., Ltd. · Turnkey OEM/ODM manufacturing partner for semiconductor and automation equipment. Assembly, wiring, inspection, and shipment under integrated process management."
     },
     nav: { company:"Company", business:"Business", capability:"Capability",
            quality:"Quality", portfolio:"Portfolio", contact:"Contact" },
     header: { langKR:"KR", langEN:"EN" },
     hero: {
-      eyebrow: "SNJ Industrial Systems · OEM · ODM · Turnkey",
+      eyebrow: "ODI Co., Ltd. · OEM · ODM · Turnkey",
       titleA:  "Precision OEM/ODM Partner\nfor Semiconductor &",
       titleB:  "Automation Equipment",
-      lede:    "SNJ delivers customer-designed equipment\nas production-ready machines.\n\nWe integrate mechanical assembly, electrical wiring,\nfunctional testing, and shipment preparation — supporting semiconductor,\ndisplay, and automation equipment projects.",
+      lede:    "ODI delivers customer-designed equipment\nas production-ready machines.\n\nWe integrate mechanical assembly, electrical wiring,\nfunctional testing, and shipment preparation — supporting semiconductor,\ndisplay, and automation equipment projects.",
       ctaBiz:"Explore Business", ctaContact:"Contact Us",
       metaK1:"Business Areas", metaV1:"Semiconductor · Automation\nAutomotive · Display",
-      metaK2:"Facility",       metaV2:"10-8 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do",
+      metaK2:"Facility",       metaV2:"10-75 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do",
       metaV2sub:"Republic of Korea",
       metaK3:"Scope",          metaV3:"Assembly · Wiring · Inspection · Shipment\nOEM · ODM · Turnkey",
-      capCap:"SNJ · Production Facility",
+      capCap:"ODI · Production Facility",
       capLoc:"Yanggam-myeon, Hwaseong"
     },
     co: {
-      label:"§ 01 — Company Overview", h:"About SNJ",
-      desc: "SNJ Industrial Systems is a precision equipment manufacturer specializing in OEM·ODM production of semiconductor and automation equipment.\n\nBased on customer design data, we integrate the core processes of assembly, wiring, inspection, and shipment — focusing on inspection, automation, and material-handling equipment.",
-      lede: "SNJ Industrial Systems is an industrial equipment manufacturing partner for precision equipment projects.",
+      label:"§ 01 — Company Overview", h:"About ODI",
+      desc: "ODI Co., Ltd. is a precision equipment manufacturer specializing in OEM·ODM production of semiconductor and automation equipment.\n\nBased on customer design data, we integrate the core processes of assembly, wiring, inspection, and shipment — focusing on inspection, automation, and material-handling equipment.",
+      lede: "ODI Co., Ltd. is an industrial equipment manufacturing partner for precision equipment projects.",
       p1:   "Based on the drawings, BOMs, assembly standards, and inspection criteria provided by our clients, we systematically operate the manufacturing process from equipment assembly and electrical wiring through functional testing and shipment preparation.",
       p2:   "Our role goes beyond simple parts assembly.\n\nWe review project requirements, identify potential manufacturing issues in advance, and reliably manage the flow from build through client sign-off and shipment.",
       hl1t:"Turnkey Manufacturing", hl1sub:"END-TO-END MANUFACTURING",
@@ -260,11 +260,11 @@ const I18N = {
       hl3t:"Zone-Separated Operation", hl3sub:"ZONE-SEPARATED LAYOUT",
       hl3b:"Assembly, wiring, inspection, shipment, and material storage are operated as separated zones to minimize interference between processes.",
       hl4t:"Hwaseong Factory", hl4sub:"HWASEONG FACTORY",
-      hl4b:"Located at 10-8 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do. We handle inspection, automation, and material-handling equipment across diverse precision manufacturing projects."
+      hl4b:"Located at 10-75 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do. We handle inspection, automation, and material-handling equipment across diverse precision manufacturing projects."
     },
     why: {
-      label:"§ 02 — Why SNJ", h:"Why Choose SNJ",
-      desc: "SNJ is not a simple sub-assembly vendor.\n\nWe operate as an OEM/ODM partner that owns the manufacturing flow from drawing review through shipment alongside the client. Four principles define how we work.",
+      label:"§ 02 — Why ODI", h:"Why Choose ODI",
+      desc: "ODI is not a simple sub-assembly vendor.\n\nWe operate as an OEM/ODM partner that owns the manufacturing flow from drawing review through shipment alongside the client. Four principles define how we work.",
       c1t:"Manufacturing-Centric Execution", c1sub:"MANUFACTURING EXECUTION",
       c1b:"We turn drawings and specifications into actual equipment through assembly, wiring, and inspection-focused manufacturing capabilities.",
       c2t:"Stage-Based Inspection", c2sub:"STAGE-BASED QA",
@@ -276,8 +276,8 @@ const I18N = {
     },
     biz: {
       label:"§ 03 — Business", h:"Business Areas",
-      desc: "An overview of the equipment categories SNJ manufactures, what materials we receive from clients, what we execute, and what we deliver.\n\nEvery project starts from client drawings and specifications, with detailed scope defined together during inquiry.",
-      rowK1:"Equipment", rowK2:"Client Input", rowK3:"SNJ Scope", rowK4:"Deliverable",
+      desc: "An overview of the equipment categories ODI manufactures, what materials we receive from clients, what we execute, and what we deliver.\n\nEvery project starts from client drawings and specifications, with detailed scope defined together during inquiry.",
+      rowK1:"Equipment", rowK2:"Client Input", rowK3:"ODI Scope", rowK4:"Deliverable",
       c1t:"Semiconductor Inspection Equipment", c1sub:"SEMICONDUCTOR INSPECTION",
       c1i:"Inspection and handling equipment for semiconductor back-end lines. Complex equipment combining precision transport modules and optical inspection units is assembled, wired, and tested in-house.",
       c1v1:"Loader · Handler · Vision Inspection · Inspection & Transport Equipment",
@@ -297,7 +297,7 @@ const I18N = {
       c3v3:"Assembly · Wiring · Inspection sequence verification · Outbound review",
       c3v4:"Completed equipment · Inspection records · Shipment documents",
       c4t:"OEM · ODM Turnkey", c4sub:"TURNKEY MANUFACTURING",
-      c4i:"Turnkey collaboration where SNJ integrates the full flow from material scheduling through assembly, wiring, inspection, and shipment. Partial-scope collaboration is also available.",
+      c4i:"Turnkey collaboration where ODI integrates the full flow from material scheduling through assembly, wiring, inspection, and shipment. Partial-scope collaboration is also available.",
       c4v1:"Precision equipment generally · OEM manufacturing · ODM development",
       c4v2:"Drawings · BOM · Manufacturing specs · Commissioning criteria",
       c4v3:"Material scheduling · Assembly · Wiring · Inspection · Commissioning · Shipment",
@@ -305,7 +305,7 @@ const I18N = {
     },
     mp: {
       label:"§ 04 — Manufacturing Process", h:"Manufacturing Flow",
-      desc: "SNJ's manufacturing runs in eight stages from drawing review through shipment.\n\nEach stage has defined ownership and inspection criteria, and stage transitions are governed by records and checklists.",
+      desc: "ODI's manufacturing runs in eight stages from drawing review through shipment.\n\nEach stage has defined ownership and inspection criteria, and stage transitions are governed by records and checklists.",
       s1t:"Drawing Review",       s1sub:"DRAWING REVIEW",   s1b:"Review of mechanical/electrical drawings, BOM, and specifications with manufacturability notes.",
       s2t:"Material Schedule",    s2sub:"MATERIAL SCHEDULE",s2b:"BOM-based material ordering or intake scheduling.",
       s3t:"Material Intake",      s3sub:"INTAKE",           s3b:"Verification of intake materials against drawings, then storage allocation.",
@@ -328,7 +328,7 @@ const I18N = {
     },
     qa: {
       label:"§ 06 — Quality System", h:"Quality Management",
-      desc: "Quality cannot be guaranteed by a single inspection at shipment.\n\nSNJ embeds five inspection gates inside the manufacturing flow, each with separated criteria. Every gate is operated via checklists, and results are recorded per project.",
+      desc: "Quality cannot be guaranteed by a single inspection at shipment.\n\nODI embeds five inspection gates inside the manufacturing flow, each with separated criteria. Every gate is operated via checklists, and results are recorded per project.",
       s1t:"Material Intake",  s1sub:"MATERIAL INTAKE",  s1b:"Verify intake materials against drawings/specifications, check quantity and external condition, then assign storage location.",
       s2t:"Assembly Review",  s2sub:"ASSEMBLY REVIEW",  s2b:"Drawing-based inspection after assembly, including alignment and fastening checks.",
       s3t:"Wiring Audit",     s3sub:"WIRING AUDIT",     s3b:"Cross-check wiring labels against schematics, measure insulation and continuity, and verify wiring layout.",
@@ -339,7 +339,7 @@ const I18N = {
     },
     wf: {
       label:"§ 07 — Project Workflow", h:"Project Flow",
-      desc: "From inquiry through client sign-off, SNJ projects move through eight defined stages.\n\nEach stage specifies the materials shared with the client and the verification points, so both sides track progress against a consistent baseline.",
+      desc: "From inquiry through client sign-off, ODI projects move through eight defined stages.\n\nEach stage specifies the materials shared with the client and the verification points, so both sides track progress against a consistent baseline.",
       i1t:"Inquiry · Intake",          i1p:"Intake",   i1b:"Discuss project scope, timeline, and deliverables, and receive drawings, BOM, and specifications.",
       i2t:"Drawing · BOM Review",      i2p:"Review",   i2b:"Review drawings and BOM from a manufacturability standpoint and share required clarifications.",
       i3t:"Manufacturing Schedule",    i3p:"Schedule", i3b:"Build a manufacturing schedule reflecting material intake timing and process sequence, then confirm with the client.",
@@ -350,22 +350,22 @@ const I18N = {
       i8t:"Client Sign-off Support",   i8p:"Sign-off", i8b:"Respond to client acceptance checks and any final adjustments, and close out handover documentation."
     },
     growth: {
-      label:"§ 08 — SNJ Growth Overview", h:"SNJ Growth Momentum",
-      desc: "SNJ continues to build growth momentum through stable manufacturing operations, strengthened quality systems, and an expanding equipment portfolio for semiconductor and automation industries.",
+      label:"§ 08 — ODI Growth Overview", h:"ODI Growth Momentum",
+      desc: "ODI continues to build growth momentum through stable manufacturing operations, strengthened quality systems, and an expanding equipment portfolio for semiconductor and automation industries.",
       c1lbl:"CHART · 01 · LINE",  c1t:"Business Growth Trend", c1sub:"사업 성장 흐름",
-      c1cap:"SNJ's growth trajectory continues to rise as its manufacturing execution and business foundation become more established.",
+      c1cap:"ODI's growth trajectory continues to rise as its manufacturing execution and business foundation become more established.",
       c2lbl:"CHART · 02 · BAR",   c2t:"Operational Expansion", c2sub:"운영 확장 흐름",
-      c2cap:"Operational capability continues to expand as SNJ accumulates project experience and manufacturing response capacity.",
+      c2cap:"Operational capability continues to expand as ODI accumulates project experience and manufacturing response capacity.",
       c3lbl:"CHART · 03 · DONUT", c3t:"Growth Foundation",     c3sub:"성장 기반 요소",
-      c3cap:"SNJ's growth is supported by a balanced foundation of production capability, quality management, delivery execution, and expansion readiness.",
+      c3cap:"ODI's growth is supported by a balanced foundation of production capability, quality management, delivery execution, and expansion readiness.",
       legend1:"Production Capability", legend2:"Quality Management",
       legend3:"Delivery Execution",    legend4:"Expansion Readiness",
       donutCenter1:"GROWTH", donutCenter2:"FOUNDATION"
     },
     port: {
       label:"§ 09 — Portfolio", h:"Case References",
-      desc: "Client and project information is presented within publicly shareable scope.\n\nEach case is anonymized and described by industry, purpose, SNJ's scope, and deliverables.",
-      rowK1:"Industry", rowK2:"Purpose", rowK3:"SNJ Scope", rowK4:"Deliverable",
+      desc: "Client and project information is presented within publicly shareable scope.\n\nEach case is anonymized and described by industry, purpose, ODI's scope, and deliverables.",
+      rowK1:"Industry", rowK2:"Purpose", rowK3:"ODI Scope", rowK4:"Deliverable",
       c1cat:"Semiconductor", c1t:"Semiconductor Inspection Equipment",
       c1v1:"Semiconductor back-end", c1v2:"OEM inspection equipment manufacturing",
       c1v3:"Assembly · Wiring · Inspection · Shipment", c1v4:"Completed equipment · Inspection records · Shipment documents",
@@ -381,7 +381,7 @@ const I18N = {
     },
     fac: {
       label:"§ 10 — Facility", h:"Facility",
-      desc: "Located at 10-8 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do. The facility is operated with zone separation across assembly, wiring, inspection, shipment, and material storage,\narranged with consideration for workflow and material movement.",
+      desc: "Located at 10-75 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do. The facility is operated with zone separation across assembly, wiring, inspection, shipment, and material storage,\narranged with consideration for workflow and material movement.",
       z1t:"Assembly Zone",    z1sub:"ASSEMBLY",         z1b:"Mechanical assembly workspace with model-specific workstations and designated tool/instrument locations.",
       z2t:"Wiring Zone",      z2sub:"WIRING",           z2b:"Wiring and insulation/continuity inspection workspace, with schematic review materials retained.",
       z3t:"Test Zone",        z3sub:"TEST",             z3b:"Workspace for functional testing and commissioning — sequence operation and precision verification.",
@@ -390,10 +390,10 @@ const I18N = {
     },
     contact: {
       label:"§ 11 — Contact",
-      hA:"Discuss your manufacturing", hB:"project with SNJ",
-      lede:"SNJ reviews drawings, BOMs, assembly standards, and inspection criteria to define a practical manufacturing scope and execution approach.",
-      infoK1:"Company",  infoV1:"SNJ Industrial Systems",
-      infoK2:"Facility", infoV2:"10-8 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do",
+      hA:"Discuss your manufacturing", hB:"project with ODI",
+      lede:"ODI reviews drawings, BOMs, assembly standards, and inspection criteria to define a practical manufacturing scope and execution approach.",
+      infoK1:"Company",  infoV1:"ODI Co., Ltd.",
+      infoK2:"Facility", infoV2:"10-75 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do",
       infoK3:"Email",    infoK4:"Phone",
       pending:"Contact details to be announced",
       inqHdr:"Inquiry Types",
@@ -404,14 +404,14 @@ const I18N = {
       inq5t:"Quality · Shipment", inq5s:"품질 · 출하",
       inq6t:"Company Profile",    inq6s:"회사소개서 요청",
       locHdr:"Location · Find Us",
-      addrShortKR:"10-8 Jeongmunsongsan-ro 93beon-gil",
+      addrShortKR:"10-75 Jeongmunsongsan-ro 93beon-gil",
       addrShortRegion:"Yanggam-myeon, Hwaseong",
       openMap:"Open Map"
     },
     foot: {
       sitemap:"Sitemap", location:"Location", contact:"Contact",
-      addrKR:  "경기도 화성시 만세구 양감면 정문송산로93번길 10-8",
-      addrEN:  "10-8 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do",
+      addrKR:  "경기도 화성시 만세구 양감면 정문송산로93번길 10-75",
+      addrEN:  "10-75 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do",
       desc:   "OEM/ODM manufacturing partner for semiconductor and automation equipment\nIntegrated support for assembly, wiring, inspection, and shipment",
       tag:    "Precision Equipment Manufacturing"
     },
@@ -484,7 +484,7 @@ function applyLanguage(lang) {
 }
 
 function initLang() {
-  const KEY = "snj-lang";
+  const KEY = "odi-lang";
   let saved = localStorage.getItem(KEY);
   if (saved !== "ko" && saved !== "en") saved = "ko";
   applyLanguage(saved);
@@ -514,8 +514,8 @@ function buildHeader(base) {
   <header class="site-head">
     <div class="site-head__row">
       <a href="${base}index.html" class="brand" aria-label="${BRAND.name}">
-        <img class="brand__mark brand__mark--light" src="${base}assets/images/brand/snj-logo-light.png" alt="${BRAND.name}">
-        <img class="brand__mark brand__mark--dark"  src="${base}assets/images/brand/snj-logo-dark.png"  alt="${BRAND.name}" aria-hidden="true">
+        <img class="brand__mark brand__mark--light" src="${base}assets/images/brand/odi-logo-light.png" alt="${BRAND.name}">
+        <img class="brand__mark brand__mark--dark"  src="${base}assets/images/brand/odi-logo-dark.png"  alt="${BRAND.name}" aria-hidden="true">
       </a>
       <nav class="nav" id="primary-nav">${navItems}</nav>
       <div class="head-actions">
@@ -549,8 +549,8 @@ function buildFooter(base) {
     <div class="wrap">
       <div class="foot-grid">
         <div class="foot-brand">
-          <img class="brand__mark brand__mark--foot brand__mark--light" src="${base}assets/images/brand/snj-logo-light.png" alt="${BRAND.name}">
-          <img class="brand__mark brand__mark--foot brand__mark--dark"  src="${base}assets/images/brand/snj-logo-dark.png"  alt="${BRAND.name}" aria-hidden="true">
+          <img class="brand__mark brand__mark--foot brand__mark--light" src="${base}assets/images/brand/odi-logo-light.png" alt="${BRAND.name}">
+          <img class="brand__mark brand__mark--foot brand__mark--dark"  src="${base}assets/images/brand/odi-logo-dark.png"  alt="${BRAND.name}" aria-hidden="true">
           <h3 class="foot-name">${BRAND.name}</h3>
           <p class="foot-desc" data-i18n="foot.desc"></p>
         </div>
@@ -563,8 +563,8 @@ function buildFooter(base) {
         <div class="foot-col foot-col--location">
           <h6 data-i18n="foot.location">Location</h6>
           <ul>
-            <li><span class="muted" data-i18n="foot.addrKR">경기도 화성시 만세구 양감면 정문송산로93번길 10-8</span></li>
-            <li><span class="muted" data-i18n="foot.addrEN">10-8 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do</span></li>
+            <li><span class="muted" data-i18n="foot.addrKR">경기도 화성시 만세구 양감면 정문송산로93번길 10-75</span></li>
+            <li><span class="muted" data-i18n="foot.addrEN">10-75 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do</span></li>
           </ul>
         </div>
 
@@ -612,7 +612,7 @@ function injectLayout() {
 }
 
 function initTheme() {
-  const KEY = "snj-theme";
+  const KEY = "odi-theme";
   const saved = localStorage.getItem(KEY);
   if (saved === "dark" || saved === "light") {
     document.documentElement.setAttribute("data-theme", saved);
@@ -708,5 +708,5 @@ document.addEventListener("DOMContentLoaded", () => {
   activateSlots();
   initReveal();
   initGrowthCharts();
-  window.SNJ = { BRAND, CONTACT, NAV, I18N, applyLanguage };
+  window.ODI = { BRAND, CONTACT, NAV, I18N, applyLanguage };
 });

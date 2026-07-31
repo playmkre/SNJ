@@ -1,8 +1,8 @@
-# SNJ Industrial Systems — Corporate Site (v3.2)
+# 오디아이 주식회사 (ODI) — Corporate Site (v3.2)
 
-반도체·자동화 장비 OEM·ODM Turnkey 제조 파트너 SNJ Industrial Systems의 공식 정적 홈페이지 빌드입니다. 단일 정적 사이트로 구성되며 빌드 도구·번들러·서버 의존성 없이 정적 호스팅 또는 로컬 파일 시스템에서 그대로 동작합니다.
+반도체·자동화 장비 OEM·ODM Turnkey 제조 파트너 오디아이 주식회사 (ODI)의 공식 정적 홈페이지 빌드입니다. 단일 정적 사이트로 구성되며 빌드 도구·번들러·서버 의존성 없이 정적 호스팅 또는 로컬 파일 시스템에서 그대로 동작합니다.
 
-모든 화면 및 문서 표기는 **SNJ Industrial Systems** 또는 **SNJ**로 통일되어 있습니다.
+모든 화면 및 문서 표기는 **오디아이 주식회사 (ODI)** 또는 **ODI**로 통일되어 있습니다.
 
 ---
 
@@ -10,11 +10,11 @@
 
 | 항목 | 내용 |
 |---|---|
-| 브랜드 표기 | 화면·메타·주석·alt·aria·푸터·콘솔 출력 모두 SNJ 단독 기준으로 정리 |
-| 새 로고 | 메탈릭 SNJ + 파란 N 강조 + INDUSTRIAL SYSTEMS 가로형 PNG, 흰 배경 알파 처리 |
+| 브랜드 표기 | 화면·메타·주석·alt·aria·푸터·콘솔 출력 모두 ODI 단독 기준으로 정리 |
+| 새 로고 | 메탈릭 ODI + 파란 N 강조 + INDUSTRIAL SYSTEMS 가로형 PNG, 흰 배경 알파 처리 |
 | 파비콘 | 16·32·180px + `favicon.ico` 4종 동시 제공 |
 | 헤더 로고 | 36×36 정사각 → 38×130 가로형 확대 (모바일 32×110) |
-| 언어 토글 | Header 우측 `[ KR \| EN ]` segmented control, 한국어 기본, `localStorage("snj-lang")`, `<html lang>` 동기화 |
+| 언어 토글 | Header 우측 `[ KR \| EN ]` segmented control, 한국어 기본, `localStorage("odi-lang")`, `<html lang>` 동기화 |
 | i18n 시스템 | `data-i18n` 속성 기반, JS 사전 lookup, KR/EN 동시 정의, 본문 카드 전체 적용 |
 | 성장 그래프 | 꺾은선·막대·도넛 반복 애니메이션 유지, `cubic-bezier(.45,.05,.25,1)` easing, 7s 사이클 + 2s 휴식 |
 | Glow 효과 | 깜빡임 제거, 3.2s 부드러운 drop-shadow 펄스 |
@@ -46,15 +46,15 @@
 | 항목 | 내용 |
 |---|---|
 | **사진 렌더링 버그 수정** | tokens.css의 슬롯 활성 셀렉터 `.slot[style*="--photo"]` → `.slot.has-image`로 정정. `[style*="--photo"]`가 인라인 `--photo-pos` 속성에도 부분 매칭되어 placeholder/사진 둘 다 보이지 않던 문제 해결. main.js는 이미 사진 로드 성공 시 `has-image` 클래스를 추가하므로 매칭 동작은 동일 |
-| 주소 정정 | "경기도 화성시 양감면" → **"경기도 화성시 만세구 양감면 정문송산로93번길 10-8"** 로 전체 갱신. KR/EN 사전 + index.html 인라인 fallback 모두 정합 |
+| 주소 정정 | "경기도 화성시 양감면" → **"경기도 화성시 만세구 양감면 정문송산로93번길 10-75"** 로 전체 갱신. KR/EN 사전 + index.html 인라인 fallback 모두 정합 |
 
 ### v3.2.4 듀얼 모드 로고
 
 | 항목 | 내용 |
 |---|---|
-| 새 로고 2종 | 라이트 모드용 (네이비 SNJ + 파란 N) + 다크 모드용 (흰 SNJ + 파란 N). 배경 투명화 처리 완료 |
+| 새 로고 2종 | 라이트 모드용 (네이비 ODI + 파란 N) + 다크 모드용 (흰 ODI + 파란 N). 배경 투명화 처리 완료 |
 | 자동 스왑 | 헤더/푸터에 두 `<img>`를 함께 렌더하고 CSS로 테마별 보임/숨김 처리 (`[data-theme="dark"]` 시 다크 로고 노출). DOM 변경 없이 즉시 전환되어 layout shift 없음 |
-| 파일 경로 | `assets/images/brand/snj-logo-light.png` (1360×597) / `snj-logo-dark.png` (1361×601). `snj-logo.png`는 라이트 버전 별칭으로 유지 |
+| 파일 경로 | `assets/images/brand/odi-logo-light.png` (1360×597) / `odi-logo-dark.png` (1361×601). `odi-logo.png`는 라이트 버전 별칭으로 유지 |
 | 파비콘 | 라이트 로고(네이비) 기준으로 재생성 — 16/32/180px 및 `favicon.ico`. 다크 모드 브라우저 탭에서도 가시성 확보 |
 
 ### v3.2.5 타이포그래피·문단 정리
@@ -62,14 +62,14 @@
 | 항목 | 내용 |
 |---|---|
 | Growth disclaimer 박스 제거 | "※ 세부 수치는 공개하지 않으며..." 텍스트 + 감싸는 박스를 HTML/CSS/사전(KR·EN)에서 완전 삭제 |
-| 섹션 타이틀 마침표 제거 | 10개 섹션의 h2 끝 `.` 마침표를 KR/EN 사전 + HTML fallback에서 일괄 제거 (`SNJ의 성장 흐름`, `프로젝트 진행 흐름`, `시설`, `사례` 등). Contact 섹션 hB도 동일 처리 |
+| 섹션 타이틀 마침표 제거 | 10개 섹션의 h2 끝 `.` 마침표를 KR/EN 사전 + HTML fallback에서 일괄 제거 (`ODI의 성장 흐름`, `프로젝트 진행 흐름`, `시설`, `사례` 등). Contact 섹션 hB도 동일 처리 |
 | 본문 단락 분리 | 다문장으로 한 줄에 길게 묶여 있던 desc/lede/intro 텍스트의 첫 문장 뒤에 단락 여백 삽입. KR/EN 사전 26개 + HTML fallback 15개. `applyLanguage()`가 사전 문자열의 `\n\n`을 만나면 0.5em spacer (`.br--gap`)를 삽입하여 자연스러운 단락 끊김을 만듦 |
 
 ### v3.2.6 레이아웃·주소·테마 정리
 
 | 항목 | 내용 |
 |---|---|
-| 주소 완성형 통일 | KR `경기도 화성시 만세구 양감면 정문송산로93번길 10-8` · EN `10-8 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do`. Footer 전용 `foot.addrKR` / `foot.addrEN` 키를 도입해 Location 컬럼은 항상 한글 1줄 + 영문 1줄 구조 |
+| 주소 완성형 통일 | KR `경기도 화성시 만세구 양감면 정문송산로93번길 10-75` · EN `10-75 Jeongmunsongsan-ro 93beon-gil, Yanggam-myeon, Manse-gu, Hwaseong-si, Gyeonggi-do`. Footer 전용 `foot.addrKR` / `foot.addrEN` 키를 도입해 Location 컬럼은 항상 한글 1줄 + 영문 1줄 구조 |
 | Growth 도넛 범례 2×2 grid | `.gcard--donut .glegend`를 grid 2열로 고정. flex-wrap에 의한 1줄 붙음 현상 제거. 420px 이하에서만 1열 전환 |
 | Contact 3분할 grid | `.cta__inner` 폭 기준을 `var(--max)`로 변경하여 다른 섹션과 좌측 정렬 일치. 데스크톱은 카피 / 정보 / 문의 3컬럼 (`0.95fr 0.75fr 1.1fr`). 1180px 이하 2열, 760px 이하 1열 |
 | Contact 정보 카드 | `.cta__info` 2열 grid + `--full` 변형으로 주소 행은 전체폭. 이메일/전화는 좌우 2열 |
@@ -99,7 +99,7 @@
 | 항목 | 내용 |
 |---|---|
 | Contact 3분할 재정의 | grid `minmax(280, 0.9fr) minmax(260, 0.85fr) minmax(360, 1.1fr)`. `align-items: stretch`로 세 컬럼 top/bottom 라인 정확히 일치. 각 컬럼 내부를 `flex column`으로 잡아 좌측 정보 카드 / 가운데 Inquiry / 우측 지도 카드가 같은 높이로 stretch |
-| Contact 제목 두 줄 고정 | `SNJ와 제조 프로젝트를` / `논의해보세요` 두 줄로 강제 줄바꿈 |
+| Contact 제목 두 줄 고정 | `ODI와 제조 프로젝트를` / `논의해보세요` 두 줄로 강제 줄바꿈 |
 | Inquiry 6 카드 세로 1열 | `.cta__inquiry-items` wrapper에 grid `repeat(6, 1fr)`. 카드 내부 텍스트 `white-space: nowrap` |
 | inq2 문구 변경 | `ODM 개발 · 제작 문의` → `ODM 개발 문의` |
 | 우측 Location 지도 카드 | Google Maps iframe embed + 다크 모드 invert/hue-rotate 필터 + "지도 열기" 외부 링크 |
@@ -108,7 +108,7 @@
 
 | 항목 | 내용 |
 |---|---|
-| 주소 번지 정정 | `정문송산로93번길 10-75` → `정문송산로93번길 10-8`로 전 파일 일괄 정정 |
+| 주소 번지 정정 | `정문송산로93번길 10-75` → `정문송산로93번길 10-75`로 전 파일 일괄 정정 |
 | 지도 좌표 적용 | 사용자 공유 링크에서 추출한 좌표 `37.098473, 126.979473` 기반 정확한 핀 위치로 iframe 교체. zoom level 17 |
 | Hero 제목 3줄 강제 | `반도체·자동화 장비` / `제조를 위한` / `정밀 OEM/ODM 파트너`(accent) |
 | Hero lede 4줄 강제 | 사용자 의도된 띄어쓰기 적용 |
@@ -129,7 +129,7 @@
 ## 2. 폴더 구조
 
 ```
-snj_v3.2/
+odi_v3.2/
 ├── index.html                   # 메인 페이지 (12 섹션, i18n 적용)
 ├── favicon.ico                  # 32×32 멀티스케일 파비콘
 ├── README.md                    # 본 문서
@@ -160,13 +160,13 @@ snj_v3.2/
 |---|---|---|
 | Hero | `#hero-anchor` | 브랜드 슬로건, lede, 2 CTA, 메타 3 셀, 대표 이미지 슬롯 |
 | 01 | `#company` | Company Overview · 4개 하이라이트 카드 (Turnkey/QA/구역/시설) |
-| 02 | `#why` | Why SNJ · 4개 차별화 포인트 카드 |
+| 02 | `#why` | Why ODI · 4개 차별화 포인트 카드 |
 | 03 | `#business` | Business · 4개 사업 영역 카드 (반도체/자동화/자동차/Turnkey) |
 | 04 | `#process` | Manufacturing Process · 8단계 공정 흐름 strip |
 | 05 | `#capability` | Capability · 시설 대표 사진 + 6개 역량 카드 |
 | 06 | `#quality` | Quality System · 5개 검수 게이트 + 검사 기록 노트 |
 | 07 | `#workflow` | Project Workflow · 8단계 프로젝트 흐름 리스트 |
-| 08 | `#growth` | SNJ Growth Overview · **꺾은선·막대·도넛 3개 차트 + disclaimer** |
+| 08 | `#growth` | ODI Growth Overview · **꺾은선·막대·도넛 3개 차트 + disclaimer** |
 | 09 | `#portfolio` | Portfolio · 3개 사례 카드 (NDA 안내 포함) |
 | 10 | `#facility` | Facility · 5컷 갤러리 + 5개 구역 설명 |
 | 11 | `#contact` | Contact · 회사 정보 4 row + 6개 문의 유형 카드 |
@@ -176,7 +176,7 @@ snj_v3.2/
 ## 4. i18n 시스템 가이드
 
 ### 4.1 동작 방식
-1. 페이지 로드 시 `main.js`가 `localStorage("snj-lang")`를 읽음. 값이 없으면 기본 `ko`.
+1. 페이지 로드 시 `main.js`가 `localStorage("odi-lang")`를 읽음. 값이 없으면 기본 `ko`.
 2. `applyLanguage(lang)`이 모든 `[data-i18n]` 요소의 텍스트를 사전에서 lookup하여 교체.
 3. `<html lang>`이 `ko` / `en`으로 동기화. `<title>` 및 `<meta description>`도 함께 갱신.
 4. 헤더의 `[ KR | EN ]` 버튼 클릭 시 `localStorage`에 저장되고 즉시 모든 텍스트가 전환.
@@ -243,7 +243,7 @@ v3.2에서 KR/EN 전환되는 영역(전 본문 카드 포함, 총 223개 `data-
 
 | # | 카테고리 | 경로 | 우선순위 | 권장 비율 | 필요 사진 |
 |---|---|---|---|---|---|
-| 1 | **brand** | `assets/images/brand/snj-logo.png` 외 | 완료 ✓ | 가로형 | 메탈릭 SNJ 가로형 로고. v3.2에서 새 로고로 통일 적용 완료 |
+| 1 | **brand** | `assets/images/brand/odi-logo.png` 외 | 완료 ✓ | 가로형 | 메탈릭 ODI 가로형 로고. v3.2에서 새 로고로 통일 적용 완료 |
 | 2 | **hero** | `assets/images/hero/hero-main.jpg` | 최상 | 16:9 또는 21:9 | 공장 내부 전경, 대표 장비 조립, 정밀 장비 클로즈업 |
 | 3 | **business** | `assets/images/business/semiconductor.jpg` | 상 | 4:3 또는 16:9 | 반도체 검사 장비, Loader/Handler/검사 모듈, 정밀 장비 프레임 |
 | 4 | **business** | `assets/images/business/automation.jpg` | 상 | 4:3 | 자동화 설비, 컨베이어/검사 라인, 액추에이터/센서 모듈 |
@@ -340,7 +340,7 @@ v3.2에서 KR/EN 전환되는 영역(전 본문 카드 포함, 총 223개 `data-
 | Easing | `cubic-bezier(.45,.05,.25,1)` — 부드러운 가속/감속 |
 | Glow | 3.2s drop-shadow pulse, 4px ↔ 12px (이전 2.4s 강한 oscillation 대체) |
 
-수치는 표시하지 않으며 화면은 SNJ의 성장 방향성과 운영 확장 흐름의 시각화 자료로 처리됩니다. 사업보고서 실제 숫자는 화면에 노출되지 않습니다.
+수치는 표시하지 않으며 화면은 ODI의 성장 방향성과 운영 확장 흐름의 시각화 자료로 처리됩니다. 사업보고서 실제 숫자는 화면에 노출되지 않습니다.
 
 ---
 
@@ -361,7 +361,7 @@ font-family:
 
 ## 9. 검수 체크리스트
 
-브랜드 SNJ 단독 표기 / 사업보고서 수치 미노출 / 그래프 숫자 없는 방향성 시각화 / 그래프 반복 애니메이션 유지 / Header KR·EN 토글 + localStorage 저장 + `<html lang>` 동기화 / 본문 카드 전체 KR·EN 전환 / 라이트·다크 모드 대비 안정 / placeholder blueprint 표시 / 사진 경로 README 정리 / JS·콘솔 오류 없음 / 모바일 헤더·언어·메뉴·그래프 무손상 — 모든 항목 충족.
+브랜드 ODI 단독 표기 / 사업보고서 수치 미노출 / 그래프 숫자 없는 방향성 시각화 / 그래프 반복 애니메이션 유지 / Header KR·EN 토글 + localStorage 저장 + `<html lang>` 동기화 / 본문 카드 전체 KR·EN 전환 / 라이트·다크 모드 대비 안정 / placeholder blueprint 표시 / 사진 경로 README 정리 / JS·콘솔 오류 없음 / 모바일 헤더·언어·메뉴·그래프 무손상 — 모든 항목 충족.
 
 ### v3.2.1 추가 확인
 
@@ -376,7 +376,7 @@ font-family:
 별도 빌드 도구 없이 정적 호스팅 또는 `python3 -m http.server` 같은 단순 서버로 즉시 동작합니다.
 
 ```bash
-cd snj_v3.2
+cd odi_v3.2
 python3 -m http.server 8080
 # http://localhost:8080
 ```
@@ -389,7 +389,7 @@ python3 -m http.server 8080
 
 1. **대기 슬롯 활성화** — `data-photo-pending` 8개 슬롯의 사진 마스킹(시리얼·모델명·번호판·외부 라벨)을 완료하거나 재촬영하면 `data-photo`로 전환. 사진 시안 받은 뒤 슬롯별 `--photo-pos` 추가 미세 조정.
 2. **추가 촬영 필요 항목 6건** (§5.4) — automotive 실장비, wiring, shipment 실컷, quality report, facility-05, contact location.
-3. **business automation 사진 출처 확인** — 톤은 좋으나 스톡/AI 가능성 있는 컷. 실제 SNJ 현장 사진으로 교체 권장.
+3. **business automation 사진 출처 확인** — 톤은 좋으나 스톡/AI 가능성 있는 컷. 실제 ODI 현장 사진으로 교체 권장.
 4. **hero-main.jpg 재활용** — v3.2.7에서 Hero 카드 슬롯이 제거되면서 `assets/images/hero/hero-main.jpg`(내부 작업장 컷)가 사용 안 됨. 폴더에는 보존 중. process·capability 추가 슬롯이나 별도 갤러리로 재배치 검토.
 5. **JP 추가** — 현재 ko/en 2 언어. 일본 시장 대응 시 `I18N.ja` 추가 + 헤더 토글 3-way 확장.
 6. **Pretendard 자체 호스팅** — 현재 시스템 fallback. 브랜드 폰트 통일 필요 시 `assets/fonts/` + `@font-face`.
@@ -399,4 +399,4 @@ python3 -m http.server 8080
 
 ## 12. 라이선스 / 사용
 
-본 코드는 SNJ Industrial Systems 내부용 웹사이트 빌드입니다. 외부 공유·재배포 전 별도 합의가 필요합니다.
+본 코드는 오디아이 주식회사 (ODI) 내부용 웹사이트 빌드입니다. 외부 공유·재배포 전 별도 합의가 필요합니다.
